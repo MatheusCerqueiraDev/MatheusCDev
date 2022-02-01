@@ -1,4 +1,5 @@
-import Head from "next/head";
+import Head from 'next/head'
+import { MainContent } from '../components/ladingPage'
 
 export default function Home() {
   return (
@@ -7,9 +8,9 @@ export default function Home() {
         <title>Home-MatheuCDev</title>
       </Head>
 
-      <main className="contentContainer">
-        <h1>Hello World</h1>
+      <main>
+        <MainContent />
       </main>
     </>
-  );
+  )
 }
