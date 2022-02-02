@@ -7,7 +7,7 @@
 @font-face {
   font-family: 'Lawyer Gothic';
   src: url('../../public/LawyerGothic-Bold.ttf');
-  font-weight: bold;
+  font-weight: normal, bold, italic;
   font-style: normal;
 }
 :root {
@@ -20,7 +20,14 @@
   --gray-850: #1f2729;
   --gray-900: #121214;
 
-  --orange-900: #f5702c;
+  --main-blue: #2ea4d9;
+  --blue-900: #1498d5;
+  --blue-200: #cde4ec;
+
+  --main-pink: #f76e5f;
+  --pink-900: #ea4c1d;
+
+  --main-green: #0ac97f;
 }
 
 @media (max-width: 1080px) {

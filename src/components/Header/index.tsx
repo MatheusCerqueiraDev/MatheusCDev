@@ -12,7 +12,9 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <h1>MatheusC.Dev</h1>
+        <h1>
+          <span>M</span>_Cerqueira
+        </h1>
         <nav className={navbar ? 'navbar active' : 'navbar'}>
           <ActiveLink activeClassName={styles.active} href="/">
             <a onClick={closeMobileMenu}>Home</a>

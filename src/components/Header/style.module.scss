@@ -1,66 +1,72 @@
 .headerContainer {
-  border-bottom: 1px solid #29292e;
+  // border-bottom: 1px solid var(--gray-300);
   font-family: 'Roboto', sans-serif;
-  height: 5rem;
-}
+  .headerContent {
+    align-items: center;
+    display: flex;
 
-.headerContent {
-  align-items: center;
-  display: flex;
-
-  height: 5rem;
-  margin: 0 auto;
-  max-width: 1120px;
-  padding: 0 2rem;
-
-  h1 {
-    color: var(--orange-900);
-  }
-  nav {
     height: 5rem;
-    margin-left: 5rem;
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 2rem;
 
-    a {
-      display: inline-block;
-      padding: 0 0.5rem;
-      position: relative;
+    h1 {
+      color: var(--gray-100);
 
-      color: var(--gray-300);
-      height: 5rem;
-      line-height: 5rem;
-
-      transition: color 0.2s;
-
-      & + a {
-        margin-left: 2rem;
-      }
-
-      &:hover {
-        color: var(--white);
-      }
-
-      &.active {
-        border-bottom: 3px solid var(--orange-900);
-        color: var(--white);
-        font-weight: bold;
-      }
-
-      &.active::after {
-        content: '';
-
-        bottom: 1px;
-        left: 0;
-        position: absolute;
-
-        background: var(--yellow-500);
-        border-radius: 3px 3px 0 0;
-        height: 3px;
-        width: 100%;
+      span {
+        color: var(--main-blue);
+        font-family: Lawyer Gothic;
       }
     }
-  }
 
-  button {
-    margin-left: auto;
+    nav {
+      height: 5rem;
+      margin-left: 5rem;
+
+      a {
+        display: inline-block;
+        padding: 0 0.5rem;
+        position: relative;
+
+        color: var(--gray-300);
+        font-size: 1.3rem;
+        font-weight: 700;
+        height: 5rem;
+        line-height: 5rem;
+
+        transition: ease-in-out 0.2s;
+
+        & + a {
+          margin-left: 2rem;
+        }
+
+        &:hover {
+          color: var(--white);
+        }
+
+        &.active {
+          // border-bottom: 3px solid var;
+          color: var(--main-pink);
+          font-weight: bold;
+        }
+
+        // &.active::after {
+        //   content: '';
+
+        //   bottom: 1px;
+        //   left: 0;
+        //   position: absolute;
+
+        //   background: var(--yellow-500);
+        //   border-radius: 3px 3px 0 0;
+        //   height: 3px;
+        //   width: 100%;
+        // }
+      }
+    }
+
+    button {
+      margin-left: auto;
+    }
   }
 }

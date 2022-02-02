@@ -1,13 +1,65 @@
 .bodyContainer {
   font-family: 'Roboto', sans-serif;
-  height: 5rem;
+  margin: 2rem 0rem;
 }
 
 .bodyContent {
   align-items: center;
-  display: flex;
+  display: block;
 
   margin: 0 auto;
   max-width: 1120px;
   padding: 0 2rem;
+
+  h1 {
+    span {
+      color: var(--main-green);
+      font-family: Lawyer Gothic;
+    }
+  }
+  form {
+    // background-color: var(--main-pink);
+
+    .formContainer {
+      display: grid;
+      grid-template-columns: repeat(1fr, 2);
+
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 1rem;
+      padding: 2rem 0rem;
+
+      label {
+        color: var(--main-pink);
+      }
+
+      label,
+      input {
+        padding: 0.5rem;
+      }
+      input {
+        border: 1px solid var(--white);
+        border-radius: 15px;
+        margin-left: 10px;
+      }
+
+      textarea {
+        border-radius: 1rem;
+        height: 40px;
+      }
+    }
+  }
+  .linkContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      transition: 0.4s ease-in-out;
+    }
+
+    a:hover {
+      color: var(--main-pink);
+    }
+  }
 }

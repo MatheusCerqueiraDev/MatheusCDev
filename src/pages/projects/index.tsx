@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Caroussel from '../../components/Caroussel'
 import style from './style.module.scss'
 
 export default function Projects() {
@@ -9,9 +8,7 @@ export default function Projects() {
         <title>Projects - MatheusCDev</title>
       </Head>
       <main className={style.bodyContainer}>
-        <div className={style.bodyContent}>
-          <Caroussel />
-        </div>
+        <div className={style.bodyContent}>ooi</div>
       </main>
     </>
   )
