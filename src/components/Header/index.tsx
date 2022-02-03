@@ -1,6 +1,41 @@
 import { useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { MdClose } from 'react-icons/md'
 import { ActiveLink } from '../ActiveLink'
 import styles from './style.module.scss'
+
+const links = [
+  {
+    id: 1,
+    label: 'Home',
+    path: '/',
+  },
+  {
+    id: 2,
+    label: 'Posts',
+    path: '/',
+  },
+  {
+    id: 3,
+    label: 'This project',
+    path: '/',
+  },
+  {
+    id: 4,
+    label: 'Matheus',
+    path: '/',
+  },
+  {
+    id: 5,
+    label: 'Projects',
+    path: '/',
+  },
+  {
+    id: 6,
+    label: 'Contact',
+    path: '/',
+  },
+]
 
 export function Header() {
   const [click, setClick] = useState(false)
@@ -16,25 +51,22 @@ export function Header() {
           <span>M</span>_Cerqueira
         </h1>
         <nav className={navbar ? 'navbar active' : 'navbar'}>
-          <ActiveLink activeClassName={styles.active} href="/">
-            <a onClick={closeMobileMenu}>Home</a>
-          </ActiveLink>
+          <div className="menuIcon" onClick={handleClick}>
+            {click ? <MdClose size={30} /> : <GiHamburgerMenu size={30} />}
+          </div>
 
-          <ActiveLink activeClassName={styles.active} href="/posts">
-            <a onClick={closeMobileMenu}>Posts</a>
-          </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/thisProject">
-            <a onClick={closeMobileMenu}>This Project</a>
-          </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/aboutme">
-            <a onClick={closeMobileMenu}>Matheus</a>
-          </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/projects">
-            <a onClick={closeMobileMenu}>Projects</a>
-          </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/contact">
-            <a onClick={closeMobileMenu}>Contact</a>
-          </ActiveLink>
+          <ul className={click ? 'navMenu active' : 'navMenu'}>
+            {links.map((item) => {
+              return (
+                <ActiveLink
+                  key={item.id}
+                  activeClassName={styles.active}
+                  href={item.path}>
+                  <a onClick={closeMobileMenu}>{item.label}</a>
+                </ActiveLink>
+              )
+            })}
+          </ul>
         </nav>
       </div>
     </header>
