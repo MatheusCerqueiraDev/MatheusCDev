@@ -4,31 +4,28 @@
 
   .footerContent {
     align-items: center;
-    display: block;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 
     height: 100%;
-    margin: 1rem auto;
-    max-width: 1120px;
-    padding: 0 2rem;
+    padding: 1.7rem;
 
-    .networkList {
-      display: block;
-      margin-top: 2rem;
-      width: 50vw;
-    }
+    .logo {
+      span {
+        color: var(--orange-900);
+        font-family: 'Lawyer Gothic';
+      }
 
-    a {
-      color: var(--gray-100);
-      transition: ease-in-out 0.4s;
-      width: 1rem;
-      &:hover {
-        color: var(--main-pink);
+      h6 {
+        font-family: 0.8rem;
       }
     }
+  }
 
-    .networkitem {
-      margin: 1rem 0rem;
+  .footerLinks {
+    list-style-type: none;
+    li {
+      margin: 0.8rem 1.7rem;
     }
   }
 }

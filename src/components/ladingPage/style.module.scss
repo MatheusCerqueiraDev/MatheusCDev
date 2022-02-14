@@ -1,11 +1,12 @@
 .mainContentContainer {
   font-family: 'Roboto', sans-serif;
-}
+  padding: 2rem;
 
-.mainContent {
-  align-items: center;
-  display: flex;
+  .mainContent {
+    align-items: center;
+    display: flex;
 
-  margin: 0 auto;
-  max-width: 1120px;
+    margin: 0 auto;
+    max-width: 1120px;
+  }
 }

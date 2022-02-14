@@ -1,11 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { FormEvent, useState } from 'react'
-import { CgMail } from 'react-icons/cg'
-import { GrInstagram } from 'react-icons/gr'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import api from '../../services/api'
-import style from './style.module.scss'
+import styles from './style.module.scss'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -37,16 +33,18 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact - MatheusCDev</title>
+        <title>MCQ - Contact</title>
       </Head>
-      <main className={style.bodyContainer}>
-        <div className={style.bodyContent}>
-          <h1>
-            <span>C</span>ontact
-          </h1>
 
-          <form onSubmit={handleSendEmail}>
-            <div className={style.formContainer}>
+      <main className={styles.bodyContainer}>
+        <div className={styles.bodyContent}>
+          <section className={styles.title}>
+            <h1>
+              <span>C</span>ontact
+            </h1>
+          </section>
+          <section className={styles.formContainer}>
+            <form onSubmit={handleSendEmail}>
               <label>Name</label>
               <input
                 type="text"
@@ -77,22 +75,22 @@ export default function Contact() {
               />
               <div>
                 <label>
-                  I have a project
                   <input
                     type="radio"
                     name="ideia"
                     value="Have a project"
                     onChange={(e) => [setProjectIdeia(e.target.value)]}
                   />
+                  I have a project
                 </label>
                 <label>
-                  I have a ideia but not a project
                   <input
                     type="radio"
                     name="projectIdea"
                     value="Don't have a project"
                     onChange={(e) => [setProjectIdeia(e.target.value)]}
                   />
+                  I have a ideia but not a project
                 </label>
               </div>
               <br />
@@ -105,35 +103,8 @@ export default function Contact() {
               />
               <input type="submit" value="Send" className="button" />
               <h6>*In this form some functionalities are under development.</h6>
-            </div>
-          </form>
-          <div className={style.linkContainer}>
-            <Link href="/">
-              <a>
-                <CgMail size={20} className="noHover" />
-                matheuscerqueira12@gmail.com
-              </a>
-            </Link>
-            <Link href="/">
-              <a>
-                <IoLogoLinkedin size={20} className="noHover" />
-                Matheus de Carvalho Cerqueira
-              </a>
-            </Link>
-            <Link href="/">
-              <a>
-                <IoLogoGithub size={20} className="noHover" />
-                MatheusCerqueiraDev
-              </a>
-            </Link>
-
-            <Link href="/">
-              <a>
-                <GrInstagram size={20} className="noHover" />
-                m_cerqueira_
-              </a>
-            </Link>
-          </div>
+            </form>
+          </section>
         </div>
       </main>
     </>

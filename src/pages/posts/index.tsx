@@ -5,8 +5,9 @@ export default function Posts() {
   return (
     <>
       <Head>
-        <title>Posts - MatheusCDev</title>
+        <title>MCQ - Posts</title>
       </Head>
+
       <main className={style.bodyContainer}>
         <div className={style.bodyContent}>heloo</div>
       </main>

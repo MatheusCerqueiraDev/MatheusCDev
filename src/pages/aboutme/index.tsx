@@ -5,8 +5,9 @@ export default function AboutMe() {
   return (
     <>
       <Head>
-        <title>About Me - MatheusCDev</title>
+        <title>MCQ - AboutMe</title>
       </Head>
+
       <main className={style.bodyContainer}>
         <div className={style.bodyContent}>heloo</div>
       </main>

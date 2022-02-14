@@ -1,9 +1,8 @@
 import Link from 'next/link'
-// import { BsLinkedin } from 'react-icons/bs'
-// import { FiTwitter } from 'react-icons/fi'
-// import { GrInstagram } from 'react-icons/gr'
-import style from './style.module.scss'
-
+import { CgMail } from 'react-icons/cg'
+import { GrInstagram } from 'react-icons/gr'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
+import styles from './style.module.scss'
 const socialNetwork = [
   {
     id: 1,
@@ -26,35 +25,51 @@ const socialNetwork = [
   },
 ]
 
-// const icons = [BsLinkedin, GrInstagram, FiTwitter]
-
 export function Footer() {
   return (
-    <footer className={style.footerContainer}>
-      <div className={style.footerContent}>
-        <h1>MatheusC.Dev</h1>
-        <div className={style.networkList}>
-          <h3>You can reach me through those links:</h3>
-          {socialNetwork.map(
-            (
-              item,
-              {
-                /* i */
-              },
-            ) => {
-              // const Icon = icons[i]
-              return (
-                <div key={item.id} className={style.networkitem}>
-                  <Link href={item.link}>
-                    {/* <Icon /> */}
-                    <a>{item.name}</a>
-                  </Link>
-                </div>
-              )
-            },
-          )}
-        </div>
-      </div>
+    <footer className={styles.footerContainer}>
+      <section className={styles.footerContent}>
+        <h1 className={styles.logo}>
+          <span>M</span>ACQuery
+          <h6>Software Solutions</h6>
+        </h1>
+      </section>
+      <section>
+        <ul className={styles.footerLinks}>
+          <li>
+            <Link href="/">
+              <a>
+                <CgMail size={20} className="noHover" />
+                matheuscerqueira12@gmail.com
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>
+                <IoLogoLinkedin size={20} className="noHover" />
+                Matheus de Carvalho Cerqueira
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>
+                <IoLogoGithub size={20} className="noHover" />
+                MatheusCerqueiraDev
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/">
+              <a>
+                <GrInstagram size={20} className="noHover" />
+                m_cerqueira_
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </section>
     </footer>
   )
 }

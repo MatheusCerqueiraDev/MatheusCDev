@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto';
   margin: 0;
   padding: 0;
 }
@@ -24,8 +25,8 @@
   --blue-900: #1498d5;
   --blue-200: #cde4ec;
 
-  --main-pink: #f76e5f;
-  --pink-900: #ea4c1d;
+  --main-orange: #f76e5f;
+  --orange-900: #ea4c1d;
 
   --main-green: #0ac97f;
 }
@@ -62,4 +63,21 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b3b5c6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #797d9a;
 }

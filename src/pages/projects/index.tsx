@@ -5,10 +5,10 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects - MatheusCDev</title>
+        <title>MCQ - Projects</title>
       </Head>
       <main className={style.bodyContainer}>
-        <div className={style.bodyContent}>ooi</div>
+        <div className={style.bodyContent}>heloo</div>
       </main>
     </>
   )
