@@ -5,16 +5,19 @@
 .SidebarContainer {
   align-items: center;
   display: grid;
+  position: fixed;
+  right: 0;
   top: 0;
-  left: 0;
 
   background: var(--orange-900);
+  border-radius: 6px 0px 0px 6px;
   height: 100%;
-  width: 100%;
-  position: fixed;
+  width: 60%;
   z-index: 999;
 
-  transition: 0.3s ease-in-out;
+  transition: 2s ease-in-out;
+
+  -webkit-transition: all 0.6s;
 
   .mobileIcon {
     display: block;
@@ -37,6 +40,9 @@
       list-style-type: none;
       text-align: center;
 
+      transition: ease-in-out 0.6s;
+      -webkit-transition: all 0.6s;
+
       .SidebarItem {
         display: block;
 
@@ -45,7 +51,7 @@
         font-size: 2rem;
         font-weight: 700;
 
-        transition: 0.2s ease-in-out;
+        transition: 0.6s ease-in-out;
 
         .SidebarLinkActive {
           color: var(--main-green);
